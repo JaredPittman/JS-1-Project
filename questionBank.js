@@ -87,19 +87,19 @@ const answerBank = {
             "Stone"],
 
     17 : ["5 Blocks",
-        "Infinitely",
-        "7 Blocks",
-        "10 Blocks"],
+            "Infinitely",
+            "7 Blocks",
+            "10 Blocks"],
 
     18 : ["Minecraft PS Vita Edition",
-        "Minecraft Wii Edition",
-        "Minecraft Education Edition",
-        "Minecraft New 3DS Edition"],
+            "Minecraft Wii Edition",
+            "Minecraft Education Edition",
+            "Minecraft New 3DS Edition"],
 
     19 : ["Sheep",
-        "Pig",
-        "Zombie",
-        "Cow"],
+            "Pig",
+            "Zombie",
+            "Cow"],
 
     20 : ["", "", "", ""]
 }
