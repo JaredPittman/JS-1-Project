@@ -1,51 +1,51 @@
 const answerBank = {
 
-    1 : ["Wood Armor",
+    0 : ["Wood Armor",
             "Shadow Armor",
              "Gold Armor",
              "Copper Armor"],
 
-    2 : ["Corruption",
+    1 : ["Corruption",
             "Forest",
             "Hell",
             "Meteor"],
 
-    3: ["Iron Ore",
+    2 : ["Iron Ore",
             "Obsidian",
             "Vile Mushroom",
             "Stone Block"],
 
-    4: ["Eater of Worlds",
+    3 : ["Eater of Worlds",
             "Skeletron", 
             "Wall of Flesh",
             "Ender Dragon"],
 
-    5: ["Gills Potion",
+    4 : ["Gills Potion",
             "Wrath Potion",
             "Iron Skin Potion",
             "Obsidian Skin Potion"],
 
-    6: ["Gold Pickaxe",
+    5 : ["Gold Pickaxe",
             "Nightmare Pickaxe",
             "Molten Pickaxe",
             "Silver Pickaxe"],
 
-    7: ["King Slime, Eye of Cthulhu, Eater of World",
+    6 : ["King Slime, Eye of Cthulhu, Eater of World",
             "Moon Lord, King Slime, Brain of Cthulhu",
             "Queen Bee, Empress of Light, Destroyer",
             "Skeletron Prime, The Twins, Plantrea"],
 
-    8: ["Dark Lance",
+    7 : ["Dark Lance",
             "Ghastly Glaive",
             "Daybreak",
             "Chlorophyte Partisan"],
 
-    9: ["Tim",
+    8 : ["Tim",
             "Goblin Scout",
             "Jungle Slime",
             "Undead Miner"],
 
-    10: ["4",
+    9 : ["4",
             "12",
             "7",
             "15"],
@@ -55,55 +55,99 @@ const answerBank = {
 
 
 
-    11 : ["Diamond",
+    10 : ["Diamond",
             "Gold",
             "Iron",
             "Netherite"],
 
-    12 : ["Badlands",
+    11 : ["Badlands",
             "Giant Taiga",
             "Shattered Savannah",
             "Warm Ocean"],
 
-    13 : ["Iron Ingot",
+    12 : ["Iron Ingot",
             "Redstone Dust",
             "Music Disc",
             "Diamond"],
 
     
-    14 : ["Sharpness",
+    13 : ["Sharpness",
             "Smite",
             "Piercing",
             "Power"],
 
-    15 : ["Potion of Leaping",
+    14 : ["Potion of Leaping",
             "Potion of Jumping",
             "Potion of Rabbits Leg",
             "Potion of Leg Strength"],
 
-    16 : ["Gold",
+    15 : ["Gold",
             "Netherite",
             "Diamond",
             "Stone"],
 
-    17 : ["5 Blocks",
-        "Infinitely",
-        "7 Blocks",
-        "10 Blocks"],
+    16 : ["5 Blocks",
+            "Infinitely",
+            "7 Blocks",
+            "10 Blocks"],
 
-    18 : ["Minecraft PS Vita Edition",
-        "Minecraft Wii Edition",
-        "Minecraft Education Edition",
-        "Minecraft New 3DS Edition"],
+    17 : ["Minecraft PS Vita Edition",
+            "Minecraft Wii Edition",
+            "Minecraft Education Edition",
+            "Minecraft New 3DS Edition"],
 
-    19 : ["Sheep",
-        "Pig",
-        "Zombie",
-        "Cow"],
+    18 : ["Sheep",
+            "Pig",
+            "Zombie",
+            "Cow"],
 
-    20 : ["Nether",
-        "The End",
-        "Aether",
-        "Overworld"]
+    19 : ["Nether",
+            "The End",
+            "Aether",
+            "Overworld"]
 }
 
+
+const questionBank = (
+
+"What is the weakest armor in the game?",
+
+"In what biome, do you have to be to fight the Eater of Worlds?",
+
+"What is the second ingredient in a Hellstone bar, aside from Hellstone ore?",
+
+"What is the name of the boss with the most HP?",
+
+"What potion makes you immune to lava?",
+
+"What is the strongest pickaxe in Terraria?",
+
+"What is the sequence of pre-hardmode bosses",
+
+"What is the strongest spear in Terraria?",
+
+"What monster drops Tattered Cloth?",
+
+"How many flail-type weapons are there?",
+
+"What is the strongest material in the game used to craft Armor/Tools?",
+
+"In what biome, can you find above ground abandoned mineshafts?",
+
+"What is the second ingredient in a Jukebox Block, aside from wooden planks?",
+
+"What is the name of enchantment that boosts damage on undead monsters?",
+
+"What potion makes you jump higher?",
+
+"What type of pickaxe mines stone the fastest?",
+
+"How far will water flow on an even plot of land?",
+
+"Which of the following is NOT a version of minecraft currently available to play?",
+
+"What mob drops leather when killed?",
+
+"Which of the following is not a realm currently in Minecraft (As of 1.19)?"
+
+)
