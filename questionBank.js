@@ -101,6 +101,9 @@ const answerBank = {
             "Zombie",
             "Cow"],
 
-    20 : ["", "", "", ""]
+    20 : ["Nether",
+        "The End",
+        "Aether",
+        "Overworld"]
 }
 
