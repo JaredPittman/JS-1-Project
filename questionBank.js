@@ -101,6 +101,9 @@ question_bank = {
         "Zombie",
         "Cow"],
 
-    20 : ["", "", "", ""]
+    20 : ["Nether",
+        "The End",
+        "Aether",
+        "Overworld"]
 }
 
