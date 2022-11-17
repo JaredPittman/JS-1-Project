@@ -11,14 +11,42 @@ question_bank = {
     "T9": ["", "", "", ""],
     "T10": ["", "", "", ""],
 
-    "M1" : ["", "", "", ""],
-    "M1" : ["", "", "", ""],
-    "M1" : ["", "", "", ""],
-    "M1" : ["", "", "", ""],
-    "M1" : ["", "", "", ""],
-    "M1" : ["", "", "", ""],
-    "M1" : ["", "", "", ""],
-    "M1" : ["", "", "", ""],
-    "M1" : ["", "", "", ""],
-    "M1" : ["", "", "", ""]
+    "M1" : ["Diamond",
+            "Gold",
+            "Iron",
+            "Netherite"],
+
+    "M2" : ["Badlands",
+            "Giant Taiga",
+            "Shattered Savannah",
+            "Warm Ocean"],
+
+    "M3" : ["Iron Ingot",
+            "Redstone Dust",
+            "Music Disc",
+            "Diamond"],
+
+    
+    "M4" : ["Sharpness",
+            "Smite",
+            "Piercing",
+            "Power"],
+
+    "M5" : ["Potion of Leaping",
+            "Potion of Jumping",
+            "Potion of Rabbits Leg",
+            "Potion of Leg Strength"],
+
+    "M6" : ["Gold",
+        "Netherite",
+        "Diamond",
+        "Stone"],
+
+    "M7" : ["", "", "", ""],
+
+    "M8" : ["", "", "", ""],
+
+    "M9" : ["", "", "", ""],
+
+    "M10" : ["", "", "", ""]
 }
