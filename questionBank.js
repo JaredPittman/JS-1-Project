@@ -1,5 +1,5 @@
-question_bank = {
-
+const answer_bank = {
+////////////////////////////// TERRARIA QUESTIONS/////////////////
     "T1": ["Wood Armor",
             "Shadow Armor",
              "Gold Armor",
@@ -50,42 +50,50 @@ question_bank = {
             "7",
             "15"],
 
-    "M1" : ["Diamond",
+
+///////////////////////// MINECRAFT QUESTIONS////////////////////////////////
+
+
+
+    11 : ["Diamond",
             "Gold",
             "Iron",
             "Netherite"],
 
-    "M2" : ["Badlands",
+    12 : ["Badlands",
             "Giant Taiga",
             "Shattered Savannah",
             "Warm Ocean"],
 
-    "M3" : ["Iron Ingot",
+    13 : ["Iron Ingot",
             "Redstone Dust",
             "Music Disc",
             "Diamond"],
 
     
-    "M4" : ["Sharpness",
+    14 : ["Sharpness",
             "Smite",
             "Piercing",
             "Power"],
 
-    "M5" : ["Potion of Leaping",
+    15 : ["Potion of Leaping",
             "Potion of Jumping",
             "Potion of Rabbits Leg",
             "Potion of Leg Strength"],
 
-    "M6" : ["Gold",
-        "Netherite",
-        "Diamond",
-        "Stone"],
+    16 : ["Gold",
+            "Netherite",
+            "Diamond",
+            "Stone"],
 
-    "M7" : ["", "", "", ""],
+    17 : ["5 Blocks",
+        "Infinitely",
+        "7 Blocks",
+        "10 Blocks"],
 
-    "M8" : ["", "", "", ""],
+    18 : ["Minecraft PS Vita Edition", "", "", ""],
 
-    "M9" : ["", "", "", ""],
+    19 : ["", "", "", ""],
 
-    "M10" : ["", "", "", ""]
+    20 : ["", "", "", ""]
 }
