@@ -108,7 +108,7 @@ const answerBank = {
 }
 
 
-const questionBank = (
+var questionBank = (
 
 "What is the weakest armor in the game?",
 
