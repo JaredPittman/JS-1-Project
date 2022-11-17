@@ -13,6 +13,6 @@ document.addEventListener("DOMContentLoaded", () =>{
         return  Math.floor(Math.random() * 20) + 10;
     }
     
-    console.log(getRandomMinecraft);
-    console.log(getRandomTerraria);
+    console.log(getRandomMinecraft());
+    console.log(getRandomTerraria());
 })
