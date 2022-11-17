@@ -1,4 +1,4 @@
-question_bank = {
+const answerBank = {
 
     1 : ["Wood Armor",
             "Shadow Armor",
