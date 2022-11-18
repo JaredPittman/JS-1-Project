@@ -171,7 +171,7 @@ const submitClickHandler =  () => {
     $("#option2").nextElementSibling.textContent = answerBank[randomQuestion][1];
     $("#option3").nextElementSibling.textContent = answerBank[randomQuestion][2];
     $("#option4").nextElementSibling.textContent = answerBank[randomQuestion][3];
-    document.querySelector('input[name="questionOption"]:checked').checked = false;
+    $('input[name="questionOption"]:checked').checked = false;
 
 }
 
