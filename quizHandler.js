@@ -182,9 +182,9 @@ document.addEventListener("DOMContentLoaded", () =>{
     $("#submit").addEventListener("click", submitClickHandler);
 
     for(let i = 0; i < 5;){
-        let quesitonId = getRandomMinecraft();
-        console.log(quesitonId);
-        if(questionArr.includes(quesitonId)){
+        let questionId = getRandomMinecraft();
+        console.log(questionId);
+        if(!questionArr.includes(questionId)){
             console.log("uhhhhh")
         }else{
             questionArr.push(questionId);
@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", () =>{
         let questionId = getRandomTerraria();
         console.log(questionId);
 
-        if(questionArr.includes(quesitonId)){
+        if(questionArr.includes(questionId)){
             console.log("uh")
         }else{
             questionArr.push(questionId);
