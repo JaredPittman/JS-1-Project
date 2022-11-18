@@ -172,6 +172,7 @@ const submitClickHandler =  () => {
     $("#option4").nextElementSibling.textContent = answerBank[randomQuestion][3];
 
 
+
 }
 
 document.addEventListener("DOMContentLoaded", () =>{
