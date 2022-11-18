@@ -175,34 +175,37 @@ const submitClickHandler =  () => {
 
 }
 
+    const img = new Image()
+    img.src = img.src;
+
 
 
 document.addEventListener("DOMContentLoaded", () =>{
 
     $("#submit").addEventListener("click", submitClickHandler);
 
-    for(let i = 0; i < 5;){
-        let questionId = getRandomMinecraft();
-        console.log(questionId);
-        if(!questionArr.includes(questionId)){
-            console.log("uhhhhh")
-        }else{
-            questionArr.push(questionId);
-            i++;
-        }
-    }
+    // for(let i = 0; i < 5;){
+    //     let questionId = getRandomMinecraft();
+    //     console.log(questionId);
+    //     if(questionArr.includes(questionId)){
+    //         console.log("uhhhhh")
+    //     }else{
+    //         questionArr.push(questionId);
+    //         i++;
+    //     }
+    //  }
 
-    for(let i = 0; i < 5;){
-        let questionId = getRandomTerraria();
-        console.log(questionId);
+    // for(let i = 0; i < 5;){
+    //     let questionId = getRandomTerraria();
+    //     console.log(questionId);
 
-        if(questionArr.includes(questionId)){
-            console.log("uh")
-        }else{
-            questionArr.push(questionId);
-            i++
-        }
-    }
+    //     if(questionArr.includes(questionId)){
+    //         console.log("uh")
+    //     }else{
+    //         questionArr.push(questionId);
+    //         i++;
+    //     }
+    // }
 
 })
 
