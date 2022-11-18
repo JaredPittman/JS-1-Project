@@ -1,6 +1,7 @@
 // "use strict";
 
 const $ = selector => document.querySelector(selector);
+var questionArr = [];
 
 var questionBank = [
 
@@ -172,12 +173,36 @@ const submitClickHandler =  () => {
     $("#option4").nextElementSibling.textContent = answerBank[randomQuestion][3];
 
 
-
 }
+
+
 
 document.addEventListener("DOMContentLoaded", () =>{
 
     $("#submit").addEventListener("click", submitClickHandler);
+
+    for(let i = 0; i < 5;){
+        let quesitonId = getRandomMinecraft();
+        console.log(quesitonId);
+        if(questionArr.includes(quesitonId)){
+            console.log("uhhhhh")
+        }else{
+            questionArr.push(questionId);
+            i++;
+        }
+    }
+
+    for(let i = 0; i < 5;){
+        let questionId = getRandomTerraria();
+        console.log(questionId);
+
+        if(questionArr.includes(quesitonId)){
+            console.log("uh")
+        }else{
+            questionArr.push(questionId);
+            i++
+        }
+    }
 
 })
 
