@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 
 const $ = selector => document.querySelector(selector);
 var questionArr = [];
@@ -178,48 +178,72 @@ var imgBank = [
         "images/Q10_Realms.png"
 ]
 
-function getRandomTerraria(){
-    return Math.floor(Math.random() * 10);
+// function getRandomTerraria(){
+//     return Math.floor(Math.random() * 10);
+// }
+// function getRandomMinecraft(){
+//     return  Math.floor(Math.random() * 10) + 10;
+// }
+
+function randomQuesitonIdList(){
+        let qList = [];
+
+        for(let i = 0; i < 10;){
+                let num =  Math.floor(Math.random() * 19);
+                if(!qList.includes(num)){
+                        qList.push(num);
+                        i++;
+                        // console.log(qList);
+                }
+        }
+        return qList;
 }
-function getRandomMinecraft(){
-    return  Math.floor(Math.random() * 10) + 10;
+
+let constlist = randomQuesitonIdList();
+
+function questionTextHandler(questionId){
+        console.log(constlist);
+        console.log(questionId);
+        $("#question").textContent = questionBank[questionId];
+            
+        $("#option1").nextElementSibling.textContent = answerBank[questionId][0];
+        $("#option2").nextElementSibling.textContent = answerBank[questionId][1];
+        $("#option3").nextElementSibling.textContent = answerBank[questionId][2];
+        $("#option4").nextElementSibling.textContent = answerBank[questionId][3];
+    
+        $("#questionIMG").src = imgBank[questionId];
+
 }
+
+
 
 const submitClickHandler =  () => {
 //     console.log(getRandomMinecraft());
 //     let randomQuestion = getRandomMinecraft();
         if($('#option1').checked == false && $('#option2').checked == false && $('#option3').checked == false && $('#option4').checked == false){
-        alert("Please select an option");
-        }else {
-                var randomQuestion = null
-                let minecraftOrTerraria = Math.floor(Math.random() * 2);
-            
-                if(minecraftOrTerraria == 0){
-                    randomQuestion = getRandomTerraria();
-                } else{
-                    randomQuestion = getRandomMinecraft();
-                }
-            
-                $("#question").textContent = questionBank[randomQuestion];
-            
-                $("#option1").nextElementSibling.textContent = answerBank[randomQuestion][0];
-                $("#option2").nextElementSibling.textContent = answerBank[randomQuestion][1];
-                $("#option3").nextElementSibling.textContent = answerBank[randomQuestion][2];
-                $("#option4").nextElementSibling.textContent = answerBank[randomQuestion][3];
-            //     $('input[name="questionOption"]:checked').checked = false;
-            
-                $("#questionIMG").src = imgBank[randomQuestion];
-            
-                $('input[name="questionOption"]:checked').checked = false;
+                alert("Please select an option");
         }
 
+        for(let i = 1; i < 11; i++){
+                questionTextHandler(constlist[i])
+                
+                }
 
+
+
+                $('input[name="questionOption"]:checked').checked = false;
 }
+
+
 
 
 document.addEventListener("DOMContentLoaded", () =>{
 
-    $("#submit").addEventListener("click", submitClickHandler);
+         $("#submit").addEventListener("click", submitClickHandler, questionTextHandler);
+
+        questionTextHandler(constlist[0]);
+
+
 
 })
 
