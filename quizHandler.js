@@ -202,8 +202,7 @@ function randomQuesitonIdList(){
 let constlist = randomQuesitonIdList();
 
 function questionTextHandler(questionId){
-        console.log(constlist);
-        console.log(questionId);
+
         $("#question").textContent = questionBank[questionId];
             
         $("#option1").nextElementSibling.textContent = answerBank[questionId][0];
@@ -217,31 +216,54 @@ function questionTextHandler(questionId){
 
 
 
-const submitClickHandler =  () => {
-//     console.log(getRandomMinecraft());
-//     let randomQuestion = getRandomMinecraft();
-        if($('#option1').checked == false && $('#option2').checked == false && $('#option3').checked == false && $('#option4').checked == false){
-                alert("Please select an option");
-        }
+// const submitClickHandler =  () => {
+// //     console.log(getRandomMinecraft());
+// //     let randomQuestion = getRandomMinecraft();
+//         if($('#option1').checked == false && $('#option2').checked == false && $('#option3').checked == false && $('#option4').checked == false){
+//                 alert("Please select an option");
+//         }
 
-        for(let i = 1; i < 11; i++){
-                questionTextHandler(constlist[i])
+//         for(let i = 1; i < 11; i++){
+//                 questionTextHandler(constlist[i])
                 
-                }
+//                 }
 
 
 
-                $('input[name="questionOption"]:checked').checked = false;
-}
+//                 $('input[name="questionOption"]:checked').checked = false;
+// }
 
 
 
 
 document.addEventListener("DOMContentLoaded", () =>{
 
-         $("#submit").addEventListener("click", submitClickHandler, questionTextHandler);
-
         questionTextHandler(constlist[0]);
+        
+        let i = 1;
+
+
+                // $("#submit").addEventListener("click", submitClickHandler);
+                $("#submit").addEventListener ("click", ()=>{
+                        if($('#option1').checked == false && $('#option2').checked == false && $('#option3').checked == false && $('#option4').checked == false){
+                                alert("Please select an option");
+                        }
+
+                        questionTextHandler(constlist[i])    
+
+                        $('input[name="questionOption"]:checked').checked = false;
+
+                        i++;
+                        console.log(i)   
+                });
+                
+
+
+        
+                
+        if(i == 10){
+                window.location.replace("results.html");
+        }
 
 
 
