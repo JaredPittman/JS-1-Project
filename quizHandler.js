@@ -1,7 +1,7 @@
 "use strict";
 
 const $ = selector => document.querySelector(selector);
-// var questionArr = [];
+
 
 var questionBank = [
 
@@ -212,102 +212,102 @@ const checkAnswer = () =>{
         for(let i = 0; i < 10; i++){
                 if(constlist[i] == 0){
                         if($('#option4').checked == true){
-                        counter += 1;
+                           counter ++;
                         }
                 }
                 if(constlist[i] == 1){
                         if($('#option1').checked == true){
-                                counter += 1;
+                                counter ++;
                         }
                 }
                 if(constlist[i] == 2){
                         if($('#option2').checked == true){
-                                counter += 1;
+                                counter ++;
                         }
                 }
                 if(constlist[i] == 3){
                         if($('#option3').checked == true){
-                                counter += 1;
+                                counter ++;
                         }
                 }
                 if(constlist[i] == 4){
                         if($('#option5').checked == true){
-                                counter += 1;
+                                counter ++;
                         }
                 }
                 if(constlist[i] == 5){
                         if($('#option2').checked == true){
-                                counter += 1;
+                                counter ++;
                         }
                 }
                 if(constlist[i] == 6){
                         if($('#option3').checked == true){
-                                counter += 1;
+                                counter ++;
                         }
                 }
                 if(constlist[i] == 7){
                         if($('#option1').checked == true){
-                                counter += 1;
+                                counter ++;
                         }
                 }
                 if(constlist[i] == 8){
                         if($('#option3').checked == true){
-                                counter += 1;
+                                counter ++;
                         }
                 }
                 if(constlist[i] == 9){
                         if($('#option4').checked == true){
-                                counter += 1;
+                                counter ++;
                         }
                 }
                 if(constlist[i] == 10){
                         if($('#option4').checked == true){
-                                counter += 1;
+                                counter ++;
                         }
                 }
                 if(constlist[i] == 11){
                         if($('#option1').checked == true){
-                                counter += 1;
+                                counter ++;
                         }
                 }
                 if(constlist[i] == 12){
                         if($('#option4').checked == true){
-                                counter += 1;
+                                counter ++;
                         }
                 }
                 if(constlist[i] == 13){
                         if($('#option2').checked == true){
-                                counter += 1;
+                                counter ++;
                         }
                 }
                 if(constlist[i] == 14){
                         if($('#option1').checked == true){
-                                counter += 1;
+                                counter ++;
                         }
                 }
                 if(constlist[i] == 15){
                         if($('#option1').checked == true){
-                                counter += 1;
+                                counter ++;
                         }
                 }
                 if(constlist[i] == 16){
                         if($('#option3').checked == true){
-                                counter += 1;
+                                counter ++;
                         }
                 }
                 if(constlist[i] == 17){
                         if($('#option2').checked == true){
-                                counter += 1;
+                                counter ++;
                         }
                 }
                 if(constlist[i] == 18){
                         if($('#option4').checked == true){
-                                counter += 1;
+                                counter ++;
                         }
                 }
                 if(constlist[i] == 19){
                         if($('#option3').checked == true){
-                                counter += 1;
+                                counter ++;
                         }
                 }
         }
