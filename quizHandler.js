@@ -216,19 +216,21 @@ document.addEventListener("DOMContentLoaded", () =>{
         $("#submit").addEventListener ("click", ()=>{
                 if($('#option1').checked == false && $('#option2').checked == false && $('#option3').checked == false && $('#option4').checked == false){
                         alert("Please select an option");
-                }
-                if(i <= 10){
-                        questionTextHandler(constlist[i]);    
-                }
-                else{
-                        console.log("get bent nerd");
-                        window.location.replace("results.html");
+                } else{
+                        if(i <= 10){
+                                questionTextHandler(constlist[i]);    
+                        }
+                        else{
+                                console.log("get bent nerd");
+                                window.location.replace("results.html");
+                        }
+        
+                        $('input[name="questionOption"]:checked').checked = false;
+        
+                        i++;
+                        console.log(i)
                 }
 
-                $('input[name="questionOption"]:checked').checked = false;
-
-                i++;
-                console.log(i)
          
         });
                 
