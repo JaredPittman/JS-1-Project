@@ -1,7 +1,7 @@
 "use strict";
 
 const $ = selector => document.querySelector(selector);
-var questionArr = [];
+// var questionArr = [];
 
 var questionBank = [
 
@@ -177,14 +177,6 @@ var imgBank = [
         "images/Q9_Leather.png",
         "images/Q10_Realms.png"
 ]
-
-// function getRandomTerraria(){
-//     return Math.floor(Math.random() * 10);
-// }
-// function getRandomMinecraft(){
-//     return  Math.floor(Math.random() * 10) + 10;
-// }
-
 function randomQuesitonIdList(){
         let qList = [];
 
@@ -214,56 +206,33 @@ function questionTextHandler(questionId){
 
 }
 
-
-
-// const submitClickHandler =  () => {
-// //     console.log(getRandomMinecraft());
-// //     let randomQuestion = getRandomMinecraft();
-//         if($('#option1').checked == false && $('#option2').checked == false && $('#option3').checked == false && $('#option4').checked == false){
-//                 alert("Please select an option");
-//         }
-
-//         for(let i = 1; i < 11; i++){
-//                 questionTextHandler(constlist[i])
-                
-//                 }
-
-
-
-//                 $('input[name="questionOption"]:checked').checked = false;
-// }
-
-
-
-
 document.addEventListener("DOMContentLoaded", () =>{
 
         questionTextHandler(constlist[0]);
         
         let i = 1;
 
-
-                // $("#submit").addEventListener("click", submitClickHandler);
-                $("#submit").addEventListener ("click", ()=>{
-                        if($('#option1').checked == false && $('#option2').checked == false && $('#option3').checked == false && $('#option4').checked == false){
-                                alert("Please select an option");
-                        }
-
-                        questionTextHandler(constlist[i])    
-
-                        $('input[name="questionOption"]:checked').checked = false;
-
-                        i++;
-                        console.log(i)   
-                });
-                
-
-
         
+        $("#submit").addEventListener ("click", ()=>{
+                if($('#option1').checked == false && $('#option2').checked == false && $('#option3').checked == false && $('#option4').checked == false){
+                        alert("Please select an option");
+                }
+                if(i <= 10){
+                        questionTextHandler(constlist[i]);    
+                }
+                else{
+                        console.log("get bent nerd");
+                        window.location.replace("results.html");
+                }
+
+                $('input[name="questionOption"]:checked').checked = false;
+
+                i++;
+                console.log(i)
+         
+        });
                 
-        if(i == 10){
-                window.location.replace("results.html");
-        }
+
 
 
 
