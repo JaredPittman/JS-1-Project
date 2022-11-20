@@ -195,6 +195,7 @@ const submitClickHandler =  () => {
     $("#option3").nextElementSibling.textContent = answerBank[randomQuestion][2];
     $("#option4").nextElementSibling.textContent = answerBank[randomQuestion][3];
     $('input[name="questionOption"]:checked').checked = false;
+    
 
 }
 

@@ -4,17 +4,12 @@ html {
 
 h1 {
     text-align: center;
-    margin: 1em;
 }
 
 ul {
-    padding: 1em auto 1em auto;
     list-style: none;
 }
 
 #questionDiv {
-    text-align: center;
     border: 2px solid black;
-    padding: 1em;
-    
 }
