@@ -221,7 +221,6 @@ document.addEventListener("DOMContentLoaded", () =>{
 
     $("#submit").addEventListener("click", submitClickHandler);
 
-
 })
 
 
