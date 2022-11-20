@@ -188,20 +188,31 @@ function getRandomMinecraft(){
 const submitClickHandler =  () => {
 //     console.log(getRandomMinecraft());
 //     let randomQuestion = getRandomMinecraft();
-    console.log(getRandomTerraria());
-    let randomQuestion = getRandomTerraria();
-    $("#question").textContent = questionBank[randomQuestion];
+        if($('#option1').checked == false && $('#option2').checked == false && $('#option3').checked == false && $('#option4').checked == false){
+        alert("Please select an option");
+        }else {
+                var randomQuestion = null
+                let minecraftOrTerraria = Math.floor(Math.random() * 2);
+            
+                if(minecraftOrTerraria == 0){
+                    randomQuestion = getRandomTerraria();
+                } else{
+                    randomQuestion = getRandomMinecraft();
+                }
+            
+                $("#question").textContent = questionBank[randomQuestion];
+            
+                $("#option1").nextElementSibling.textContent = answerBank[randomQuestion][0];
+                $("#option2").nextElementSibling.textContent = answerBank[randomQuestion][1];
+                $("#option3").nextElementSibling.textContent = answerBank[randomQuestion][2];
+                $("#option4").nextElementSibling.textContent = answerBank[randomQuestion][3];
+            //     $('input[name="questionOption"]:checked').checked = false;
+            
+                $("#questionIMG").src = imgBank[randomQuestion];
+            
+                $('input[name="questionOption"]:checked').checked = false;
+        }
 
-    $("#option1").nextElementSibling.textContent = answerBank[randomQuestion][0];
-    $("#option2").nextElementSibling.textContent = answerBank[randomQuestion][1];
-    $("#option3").nextElementSibling.textContent = answerBank[randomQuestion][2];
-    $("#option4").nextElementSibling.textContent = answerBank[randomQuestion][3];
-//     $('input[name="questionOption"]:checked').checked = false;
-
-    $("#questionIMG").src = imgBank[randomQuestion];
-
-    $('input[name="questionOption"]:checked').checked = false;
-    
 
 }
 
