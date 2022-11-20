@@ -210,14 +210,14 @@ document.addEventListener("DOMContentLoaded", () =>{
 
         questionTextHandler(constlist[0]);
         
-        let i = 1;
+        let i = 0;
 
         
         $("#submit").addEventListener ("click", ()=>{
                 if($('#option1').checked == false && $('#option2').checked == false && $('#option3').checked == false && $('#option4').checked == false){
                         alert("Please select an option");
                 } else{
-                        if(i <= 10){
+                        if(i < 10){
                                 questionTextHandler(constlist[i]);    
                         }
                         else{
