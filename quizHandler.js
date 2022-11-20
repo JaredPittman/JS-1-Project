@@ -155,26 +155,27 @@ var answerBank = {
             "Overworld"]
 }
 var imgBank = [
-        "images\Terraria\armor1.png",
-        "images\Terraria\forest2.png",
-        "images\Terraria\hellstone3.png",
-        "images\Terraria\enderDragon4.gif",
-        "images\Terraria\alchemyTable5.gif",
-        "images\Terraria\reaverShark6.png",
-        "images\Terraria\destroyer7.png",
-        "images\Terraria\darkLance8",
-        "images\Terraria\tim9.png",
-        "images\Terraria\dripplerCrippler10.png",
-        "images\Minecraft\Q1_Ores.png",
-        "images\Minecraft\Q2_Mineshaft.png",
-        "images\Minecraft\Q3_Jukebox.png",
-        "images\Minecraft\Q4_EnchantmentBook.png",
-        "images\Minecraft\Q5_JumpPotion.png",
-        "images\Minecraft\Q6_Pickaxe.png",
-        "images\Minecraft\Q7_Water.png",
-        "images\Minecraft\Q8_MinecraftVersion.png",
-        "images\Minecraft\Q9_Leather.png",
-        "images\Minecraft\Q10_Realms.png"
+
+        "images/armor1.png",
+        "images/forest2.png",
+        "images/hellstone3.png",
+        "images/enderDragon4.gif",
+        "images/alchemyTable5.gif",
+        "images/reaverShark6.png",
+        "images/destroyer7.png",
+        "images/darkLance8",
+        "images/tim9.png",
+        "images/dripplerCrippler10.png",
+        "images/Q1_Ores.png",
+        "images/Q2_Mineshaft.png",
+        "images/Q3_Jukebox.png",
+        "images/Q4_EnchantmentBook.png",
+        "images/Q5_JumpPotion.png",
+        "images/Q6_Pickaxe.png",
+        "images/Q7_Water.png",
+        "images/Q8_MinecraftVersion.png",
+        "images/Q9_Leather.png",
+        "images/Q10_Realms.png"
 ]
 
 function getRandomTerraria(){
@@ -184,52 +185,31 @@ function getRandomMinecraft(){
     return  Math.floor(Math.random() * 10) + 10;
 }
 
-
 const submitClickHandler =  () => {
-    console.log(getRandomMinecraft());
-    let randomQuestion = getRandomMinecraft();
+//     console.log(getRandomMinecraft());
+//     let randomQuestion = getRandomMinecraft();
+    console.log(getRandomTerraria());
+    let randomQuestion = getRandomTerraria();
     $("#question").textContent = questionBank[randomQuestion];
 
     $("#option1").nextElementSibling.textContent = answerBank[randomQuestion][0];
     $("#option2").nextElementSibling.textContent = answerBank[randomQuestion][1];
     $("#option3").nextElementSibling.textContent = answerBank[randomQuestion][2];
     $("#option4").nextElementSibling.textContent = answerBank[randomQuestion][3];
+//     $('input[name="questionOption"]:checked').checked = false;
+
+    $("#questionIMG").src = imgBank[randomQuestion];
+
     $('input[name="questionOption"]:checked').checked = false;
     
 
 }
-
-    const img = new Image()
-    img.src = img.src;
-
 
 
 document.addEventListener("DOMContentLoaded", () =>{
 
     $("#submit").addEventListener("click", submitClickHandler);
 
-    // for(let i = 0; i < 5;){
-    //     let questionId = getRandomMinecraft();
-    //     console.log(questionId);
-    //     if(questionArr.includes(questionId)){
-    //         console.log("uhhhhh")
-    //     }else{
-    //         questionArr.push(questionId);
-    //         i++;
-    //     }
-    //  }
-
-    // for(let i = 0; i < 5;){
-    //     let questionId = getRandomTerraria();
-    //     console.log(questionId);
-
-    //     if(questionArr.includes(questionId)){
-    //         console.log("uh")
-    //     }else{
-    //         questionArr.push(questionId);
-    //         i++;
-    //     }
-    // }
 
 })
 
