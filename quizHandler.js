@@ -313,23 +313,20 @@ let constlist = randomQuesitonIdList();
 let counter = 0;
 
 document.addEventListener("DOMContentLoaded", () =>{
-
-        questionTextHandler(constlist[0]);
         
-        let i = 1;
+        let i = 0;
 
-        
         $("#submit").addEventListener ("click", ()=>{
                 if($('#option1').checked == false && $('#option2').checked == false && $('#option3').checked == false && $('#option4').checked == false){
                         alert("Please select an option");
                 } 
                 else{
                         if(i < 10){
+                                console.log("test");
                                 questionTextHandler(constlist[i]);  
                                 checkAnswer();  
                         }
                         else{
-                                console.log("get bent nerd");
                                 window.location.replace("results.html");
                                 $("#score").textContent = "You scored " + counter + "/10";
                         }
