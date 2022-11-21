@@ -190,9 +190,6 @@ function randomQuesitonIdList(){
         }
         return qList;
 }
-
-let constlist = randomQuesitonIdList();
-
 function questionTextHandler(questionId){
 
         $("#question").textContent = questionBank[questionId];
@@ -205,9 +202,7 @@ function questionTextHandler(questionId){
         $("#questionIMG").src = imgBank[questionId];
 
 }
-
 const checkAnswer = () =>{
-        let counter = 0
 
         for(let i = 0; i < 10; i++){
                 if(constlist[i] == 0){
@@ -231,7 +226,7 @@ const checkAnswer = () =>{
                         }
                 }
                 if(constlist[i] == 4){
-                        if($('#option5').checked == true){
+                        if($('#option4').checked == true){
                                 counter ++;
                         }
                 }
@@ -311,13 +306,17 @@ const checkAnswer = () =>{
                         }
                 }
         }
+
 }
+
+let constlist = randomQuesitonIdList();
+let counter = 0;
 
 document.addEventListener("DOMContentLoaded", () =>{
 
         questionTextHandler(constlist[0]);
         
-        let i = 0;
+        let i = 1;
 
         
         $("#submit").addEventListener ("click", ()=>{
@@ -326,11 +325,13 @@ document.addEventListener("DOMContentLoaded", () =>{
                 } 
                 else{
                         if(i < 10){
-                                questionTextHandler(constlist[i]);    
+                                questionTextHandler(constlist[i]);  
+                                checkAnswer();  
                         }
                         else{
                                 console.log("get bent nerd");
                                 window.location.replace("results.html");
+                                $("#score").textContent = "You scored " + counter + "/10";
                         }
         
                         $('input[name="questionOption"]:checked').checked = false;
