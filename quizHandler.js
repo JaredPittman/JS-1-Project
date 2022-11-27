@@ -2,158 +2,154 @@
 
 const $ = selector => document.querySelector(selector);
 
-
-var questionBank = [
-
-    "What is the weakest armor in the game?",
-    
-    "In what biome, do you have to be to fight the Eater of Worlds?",
-    
-    "What is the second ingredient in a Hellstone bar, aside from Hellstone ore?",
-    
-    "What is the name of the boss with the most HP?",
-    
-    "What potion makes you immune to lava?",
-    
-    "What is the strongest pickaxe in Terraria?",
-    
-    "What is the sequence of pre-hardmode bosses",
-    
-    "What is the strongest spear in Terraria?",
-    
-    "What monster drops Tattered Cloth?",
-    
-    "How many flail-type weapons are there?",
-    
-    "What is the strongest material in the game used to craft Armor/Tools?",
-    
-    "In what biome, can you find above ground abandoned mineshafts?",
-    
-    "What is the second ingredient in a Jukebox Block, aside from wooden planks?",
-    
-    "What is the name of enchantment that boosts damage on undead monsters?",
-    
-    "What potion makes you jump higher?",
-    
-    "What type of pickaxe mines stone the fastest?",
-    
-    "How far will water flow on an even plot of land?",
-    
-    "Which of the following is NOT a version of minecraft currently available to play?",
-    
-    "What mob drops leather when killed?",
-    
-    "Which of the following is not a realm currently in Minecraft (As of 1.19)?"
-    
-]
 var answerBank = {
 
-    0 : ["Wood Armor",
-            "Shadow Armor",
-             "Gold Armor",
-             "Copper Armor"],
+    0 : ["What is the weakest armor in the game?",
+        "Wood Armor",
+        "Shadow Armor",
+        "Gold Armor",
+        "Copper Armor",
+        "D"],
 
-    1 : ["Corruption",
-            "Forest",
-            "Hell",
-            "Meteor"],
+    1 : ["In what biome, do you have to be to fight the Eater of Worlds?",
+        "Corruption",
+        "Forest",
+        "Hell",
+        "Meteor",
+        "A"],
 
-    2 : ["Iron Ore",
-            "Obsidian",
-            "Vile Mushroom",
-            "Stone Block"],
+    2 : ["What is the second ingredient in a Hellstone bar, aside from Hellstone ore?",
+        "Iron Ore",
+        "Obsidian",
+        "Vile Mushroom",
+        "Stone Block",
+        "B"],
 
-    3 : ["Eater of Worlds",
-            "Skeletron", 
-            "Wall of Flesh",
-            "Ender Dragon"],
+    3 : ["What is the name of the boss with the most HP?",
+        "Eater of Worlds",
+        "Skeletron", 
+        "Wall of Flesh",
+        "Ender Dragon",
+        "C"],
 
-    4 : ["Gills Potion",
-            "Wrath Potion",
-            "Iron Skin Potion",
-            "Obsidian Skin Potion"],
+    4 : ["What potion makes you immune to lava?",
+        "Gills Potion",
+        "Wrath Potion",
+        "Iron Skin Potion",
+        "Obsidian Skin Potion",
+        "D"],
 
-    5 : ["Gold Pickaxe",
-            "Nightmare Pickaxe",
-            "Molten Pickaxe",
-            "Silver Pickaxe"],
+    5 : ["What is the strongest pickaxe in Terraria?",
+        "Gold Pickaxe",
+        "Nightmare Pickaxe",
+        "Molten Pickaxe",
+        "Silver Pickaxe",
+        "C"],
 
-    6 : ["King Slime, Eye of Cthulhu, Eater of World",
-            "Moon Lord, King Slime, Brain of Cthulhu",
-            "Queen Bee, Empress of Light, Destroyer",
-            "Skeletron Prime, The Twins, Plantrea"],
+    6 : ["What is the sequence of pre-hardmode bosses",
+        "King Slime, Eye of Cthulhu, Eater of World",
+        "Moon Lord, King Slime, Brain of Cthulhu",
+        "Queen Bee, Empress of Light, Destroyer",
+        "Skeletron Prime, The Twins, Plantrea",
+        "A"],
 
-    7 : ["Dark Lance",
-            "Ghastly Glaive",
-            "Daybreak",
-            "Chlorophyte Partisan"],
+    7 : ["What is the strongest spear in Terraria?",
+        "Dark Lance",
+        "Ghastly Glaive",
+        "Daybreak",
+        "Chlorophyte Partisan",
+        "C"],
 
-    8 : ["Tim",
-            "Goblin Scout",
-            "Jungle Slime",
-            "Undead Miner"],
+    8 : ["What monster drops Tattered Cloth?",
+        "Tim",
+        "Goblin Scout",
+        "Jungle Slime",
+        "Undead Miner",
+        "B"],
 
-    9 : ["4",
-            "12",
-            "7",
-            "15"],
+    9 : ["How many flail-type weapons are there?",
+        "4",
+        "12",
+        "7",
+        "15",
+        "D"],
 
 
 ///////////////////////// MINECRAFT QUESTIONS////////////////////////////////
 
 
 
-    10 : ["Diamond",
-            "Gold",
-            "Iron",
-            "Netherite"],
+    10 : ["What is the strongest material in the game used to craft Armor/Tools?",
+        "Diamond",
+        "Gold",
+        "Iron",
+        "Netherite",
+        "D"],
 
-    11 : ["Badlands",
-            "Giant Taiga",
-            "Shattered Savannah",
-            "Warm Ocean"],
+    11 : ["In what biome, can you find above ground abandoned mineshafts?",
+        "Badlands",
+        "Giant Taiga",
+        "Shattered Savannah",
+        "Warm Ocean",
+        "A"],
 
-    12 : ["Iron Ingot",
-            "Redstone Dust",
-            "Music Disc",
-            "Diamond"],
+    12 : ["What is the second ingredient in a Jukebox Block, aside from wooden planks?",
+        "Iron Ingot",
+        "Redstone Dust",
+        "Music Disc",
+        "Diamond",
+        "D"],
 
     
-    13 : ["Sharpness",
-            "Smite",
-            "Piercing",
-            "Power"],
+    13 : ["What is the second ingredient in a Jukebox Block, aside from wooden planks?",
+        "Sharpness",
+        "Smite",
+        "Piercing",
+        "Power",
+        "B"],
 
-    14 : ["Potion of Leaping",
-            "Potion of Jumping",
-            "Potion of Rabbits Leg",
-            "Potion of Leg Strength"],
+    14 : ["What potion makes you jump higher?",
+        "Potion of Leaping",
+        "Potion of Jumping",
+        "Potion of Rabbits Leg",
+        "Potion of Leg Strength",
+        "A"],
 
-    15 : ["Gold",
-            "Netherite",
-            "Diamond",
-            "Stone"],
+    15 : ["What type of pickaxe mines stone the fastest?",
+        "Gold",
+        "Netherite",
+        "Diamond",
+        "Stone",
+        "A"],
 
-    16 : ["5 Blocks",
-            "Infinitely",
-            "7 Blocks",
-            "10 Blocks"],
+    16 : ["How far will water flow on an even plot of land?",
+        "5 Blocks",
+        "Infinitely",
+        "7 Blocks",
+        "10 Blocks",
+        "C"],                                                   
 
-    17 : ["Minecraft PS Vita Edition",
-            "Minecraft Wii Edition",
-            "Minecraft Education Edition",
-            "Minecraft New 3DS Edition"],
+    17 : ["Which of the following is NOT a version of minecraft currently available to play?",
+        "Minecraft PS Vita Edition",
+        "Minecraft Wii Edition",
+        "Minecraft Education Edition",
+        "Minecraft New 3DS Edition",
+        "B"],
 
-    18 : ["Sheep",
-            "Pig",
-            "Zombie",
-            "Cow"],
+    18 : ["What mob drops leather when killed?",
+        "Sheep",
+        "Pig",
+        "Zombie",
+        "Cow",
+        "D"],
 
-    19 : ["Nether",
-            "The End",
-            "Aether",
-            "Overworld"]
-}
+    19 : ["Which of the following is not a realm currently in Minecraft (As of 1.19)?",
+        "Nether",
+        "The End",
+        "Aether",
+        "Overworld",
+        "C"]
+        }
 var imgBank = [
 
         "images/armor1.png",
@@ -180,11 +176,11 @@ var imgBank = [
 function randomQuesitonIdList(){
         let qList = [];
 
-        for(let i = 0; i < 10;){
-                let num =  Math.floor(Math.random() * 19);
+        for(let j = 0; j < 10;){
+                let num =  Math.floor(Math.random() * 19) + 1;
                 if(!qList.includes(num)){
                         qList.push(num);
-                        i++;
+                        j++;
                         // console.log(qList);
                 }
         }
@@ -192,143 +188,66 @@ function randomQuesitonIdList(){
 }
 function questionTextHandler(questionId){
 
-        $("#question").textContent = questionBank[questionId];
+        $("#question").textContent = answerBank[questionId][0];
             
-        $("#option1").nextElementSibling.textContent = answerBank[questionId][0];
-        $("#option2").nextElementSibling.textContent = answerBank[questionId][1];
-        $("#option3").nextElementSibling.textContent = answerBank[questionId][2];
-        $("#option4").nextElementSibling.textContent = answerBank[questionId][3];
+        $("#option1").nextElementSibling.textContent = answerBank[questionId][1];
+        $("#option2").nextElementSibling.textContent = answerBank[questionId][2];
+        $("#option3").nextElementSibling.textContent = answerBank[questionId][3];
+        $("#option4").nextElementSibling.textContent = answerBank[questionId][4];
     
         $("#questionIMG").src = imgBank[questionId];
 
 }
 const checkAnswer = () =>{
-
         for(let i = 0; i < 10; i++){
-                if(constlist[i] == 0){
-                        if($('#option4').checked == true){
-                           counter ++;
+                let option;
+
+                if($('#option1').checked == true){
+                        option = "A"
                         }
+                if($('#option2').checked == true){
+                        option = "B"
+                        }
+                if($('#option3').checked == true){
+                        option = "C"
+                        }
+                if($('#option4').checked == true){
+                        option = "D"
                 }
-                if(constlist[i] == 1){
-                        if($('#option1').checked == true){
-                                counter ++;
-                        }
-                }
-                if(constlist[i] == 2){
-                        if($('#option2').checked == true){
-                                counter ++;
-                        }
-                }
-                if(constlist[i] == 3){
-                        if($('#option3').checked == true){
-                                counter ++;
-                        }
-                }
-                if(constlist[i] == 4){
-                        if($('#option4').checked == true){
-                                counter ++;
-                        }
-                }
-                if(constlist[i] == 5){
-                        if($('#option2').checked == true){
-                                counter ++;
-                        }
-                }
-                if(constlist[i] == 6){
-                        if($('#option3').checked == true){
-                                counter ++;
-                        }
-                }
-                if(constlist[i] == 7){
-                        if($('#option1').checked == true){
-                                counter ++;
-                        }
-                }
-                if(constlist[i] == 8){
-                        if($('#option3').checked == true){
-                                counter ++;
-                        }
-                }
-                if(constlist[i] == 9){
-                        if($('#option4').checked == true){
-                                counter ++;
-                        }
-                }
-                if(constlist[i] == 10){
-                        if($('#option4').checked == true){
-                                counter ++;
-                        }
-                }
-                if(constlist[i] == 11){
-                        if($('#option1').checked == true){
-                                counter ++;
-                        }
-                }
-                if(constlist[i] == 12){
-                        if($('#option4').checked == true){
-                                counter ++;
-                        }
-                }
-                if(constlist[i] == 13){
-                        if($('#option2').checked == true){
-                                counter ++;
-                        }
-                }
-                if(constlist[i] == 14){
-                        if($('#option1').checked == true){
-                                counter ++;
-                        }
-                }
-                if(constlist[i] == 15){
-                        if($('#option1').checked == true){
-                                counter ++;
-                        }
-                }
-                if(constlist[i] == 16){
-                        if($('#option3').checked == true){
-                                counter ++;
-                        }
-                }
-                if(constlist[i] == 17){
-                        if($('#option2').checked == true){
-                                counter ++;
-                        }
-                }
-                if(constlist[i] == 18){
-                        if($('#option4').checked == true){
-                                counter ++;
-                        }
-                }
-                if(constlist[i] == 19){
-                        if($('#option3').checked == true){
-                                counter ++;
-                        }
+
+                if(option == answerBank[randomList[i]][5]){
+                        score ++;
                 }
         }
-
 }
 
-let constlist = randomQuesitonIdList();
-let counter = 0;
+
+let randomList = randomQuesitonIdList();
+let score = 0;
 
 document.addEventListener("DOMContentLoaded", () =>{
         
-        let i = 0;
+        let i = 1;
+
+        questionTextHandler(randomList[0]);  
 
         $("#submit").addEventListener ("click", ()=>{
-                if($('#option1').checked == false && $('#option2').checked == false && $('#option3').checked == false && $('#option4').checked == false){
-                        alert("Please select an option");
+                if($('#option1').checked == false && 
+                $('#option2').checked == false && 
+                $('#option3').checked == false && 
+                $('#option4').checked == false){
+                alert("Please select an option");
                 } 
                 else{
                         if(i < 10){
                                 console.log("test");
-                                questionTextHandler(constlist[i]);  
+                                questionTextHandler(randomList[i]);  
                                 checkAnswer();  
                         }
                         else{
-                                window.location.replace("results.html");
-                                $("#score").textContent = "You scored " + counter + "/10";
+                                // window.location.replace("results.html");
+                                // $("#score").textContent = "You scored " + counter + "/10";
+                                $("#question").textContent = "Your score is " + score + "/10";
                         }
         
                         $('input[name="questionOption"]:checked').checked = false;
