@@ -181,11 +181,11 @@ function randomQuesitonIdList(){
                 if(!qList.includes(num)){
                         qList.push(num);
                         j++;
-                        // console.log(qList);
                 }
         }
         return qList;
 }
+
 function questionTextHandler(questionId){
 
         $("#question").textContent = answerBank[questionId][0];
@@ -198,54 +198,36 @@ function questionTextHandler(questionId){
         $("#questionIMG").src = imgBank[questionId];
 
 }
-const checkAnswer = (num) =>{
-        // for(let i = 0; i < 10; i++){
 
+let score = 0;
+let randomList = randomQuesitonIdList();
+let option;
+
+const checkAnswer = (num) =>{
                 if($('#option1').checked == true){
                         option = 'A';
-                        if(option == answerBank[randomList[num]][5]){
-                            score ++;
-                            console.log(score + " score in if");
-                    }
                         }
                 if($('#option2').checked == true){
                         option = 'B';
-                        if(option == answerBank[randomList[num]][5]){
-                            score ++;
-                            console.log(score + " score in if");
-                    }
                         }
                 if($('#option3').checked == true){
                         option = 'C';
-                        if(option == answerBank[randomList[num]][5]){
-                            score ++;
-                            console.log(score + " score in if");
-                    }
                         }
                 if($('#option4').checked == true){
                         option = 'D';
-                        if(option == answerBank[randomList[num]][5]){
-                            score ++;
-                            console.log(score + " score in if");
-                    }
                 }
-                // if(option == answerBank[randomList[num]][5]){
-                //         score ++;
-                //         console.log(score + " score in if");
-                // }
-                console.log(score + " score under if")
-                console.log(num + " Num param in checkAnswer");
+                if(option === answerBank[num][5]){
+                        score ++;
+                        console.log(score + " score in if");
+                }
+                return score;
         }
-//}
-
-
-let randomList = randomQuesitonIdList();
-let score = 0;
-let option;
 
 document.addEventListener("DOMContentLoaded", () =>{
         
-        let i = 0;
+        let i = 1;
+
+        questionTextHandler(randomList[0])
 
         $("#submit").addEventListener ("click", ()=>{
                 if($('#option1').checked == false && 
@@ -269,19 +251,9 @@ document.addEventListener("DOMContentLoaded", () =>{
                                 // $("#question").textContent = "Your score is " + score + "/10";
                         }
         
-                        $('input[name="questionOption"]:checked').checked = false;
-        
-
-
+                    $('input[name="questionOption"]:checked').checked = false;
                 }
-
-         
         });
-                
-
-
-
-
 })
 
 
