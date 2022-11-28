@@ -101,7 +101,7 @@ var answerBank = {
         'D'],
 
     
-    13 : ["What is the second ingredient in a Jukebox Block, aside from wooden planks?",
+    13 : ["What enchantment allows players to deal more damage to undead monsters?",
         "Sharpness",
         "Smite",
         "Piercing",
@@ -134,7 +134,7 @@ var answerBank = {
         "Minecraft Wii Edition",
         "Minecraft Education Edition",
         "Minecraft New 3DS Edition",
-        'C'],
+        'B'],
 
     18 : ["What mob drops leather when killed?",
         "Sheep",
@@ -262,6 +262,7 @@ document.addEventListener("DOMContentLoaded", () =>{
                             console.log(i+ " i") 
                         }
                         else{
+                            localStorage.setItem("score",score);
                             // try local storage for redirecting score
                                 // window.location.replace("results.html");
                                 // $("#score").textContent = "You scored " + counter + "/10";
