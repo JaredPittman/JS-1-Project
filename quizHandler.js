@@ -9,70 +9,70 @@ var answerBank = {
         "Shadow Armor",
         "Gold Armor",
         "Copper Armor",
-        "D"],
+        'D'],
 
     1 : ["In what biome, do you have to be to fight the Eater of Worlds?",
         "Corruption",
         "Forest",
         "Hell",
         "Meteor",
-        "A"],
+        'A'],
 
     2 : ["What is the second ingredient in a Hellstone bar, aside from Hellstone ore?",
         "Iron Ore",
         "Obsidian",
         "Vile Mushroom",
         "Stone Block",
-        "B"],
+        'B'],
 
     3 : ["What is the name of the boss with the most HP?",
         "Eater of Worlds",
         "Skeletron", 
         "Wall of Flesh",
         "Ender Dragon",
-        "C"],
+        'C'],
 
     4 : ["What potion makes you immune to lava?",
         "Gills Potion",
         "Wrath Potion",
         "Iron Skin Potion",
         "Obsidian Skin Potion",
-        "D"],
+        'D'],
 
     5 : ["What is the strongest pickaxe in Terraria?",
         "Gold Pickaxe",
         "Nightmare Pickaxe",
         "Molten Pickaxe",
         "Silver Pickaxe",
-        "C"],
+        'C'],
 
     6 : ["What is the sequence of pre-hardmode bosses",
         "King Slime, Eye of Cthulhu, Eater of World",
         "Moon Lord, King Slime, Brain of Cthulhu",
         "Queen Bee, Empress of Light, Destroyer",
         "Skeletron Prime, The Twins, Plantrea",
-        "A"],
+        'A'],
 
     7 : ["What is the strongest spear in Terraria?",
         "Dark Lance",
         "Ghastly Glaive",
         "Daybreak",
         "Chlorophyte Partisan",
-        "C"],
+        'C'],
 
     8 : ["What monster drops Tattered Cloth?",
         "Tim",
         "Goblin Scout",
         "Jungle Slime",
         "Undead Miner",
-        "B"],
+        'B'],
 
     9 : ["How many flail-type weapons are there?",
         "4",
         "12",
         "7",
         "15",
-        "D"],
+        'D'],
 
 
 ///////////////////////// MINECRAFT QUESTIONS////////////////////////////////
@@ -84,21 +84,21 @@ var answerBank = {
         "Gold",
         "Iron",
         "Netherite",
-        "D"],
+        'D'],
 
     11 : ["In what biome, can you find above ground abandoned mineshafts?",
         "Badlands",
         "Giant Taiga",
         "Shattered Savannah",
         "Warm Ocean",
-        "A"],
+        'A'],
 
     12 : ["What is the second ingredient in a Jukebox Block, aside from wooden planks?",
         "Iron Ingot",
         "Redstone Dust",
         "Music Disc",
         "Diamond",
-        "D"],
+        'D'],
 
     
     13 : ["What is the second ingredient in a Jukebox Block, aside from wooden planks?",
@@ -106,49 +106,49 @@ var answerBank = {
         "Smite",
         "Piercing",
         "Power",
-        "B"],
+        'B'],
 
     14 : ["What potion makes you jump higher?",
         "Potion of Leaping",
         "Potion of Jumping",
         "Potion of Rabbits Leg",
         "Potion of Leg Strength",
-        "A"],
+        'A'],
 
     15 : ["What type of pickaxe mines stone the fastest?",
         "Gold",
         "Netherite",
         "Diamond",
         "Stone",
-        "A"],
+        'A'],
 
     16 : ["How far will water flow on an even plot of land?",
         "5 Blocks",
         "Infinitely",
         "7 Blocks",
         "10 Blocks",
-        "C"],                                                   
+        'C'],                                                   
 
     17 : ["Which of the following is NOT a version of minecraft currently available to play?",
         "Minecraft PS Vita Edition",
         "Minecraft Wii Edition",
         "Minecraft Education Edition",
         "Minecraft New 3DS Edition",
-        "B"],
+        'C'],
 
     18 : ["What mob drops leather when killed?",
         "Sheep",
         "Pig",
         "Zombie",
         "Cow",
-        "D"],
+        'D'],
 
     19 : ["Which of the following is not a realm currently in Minecraft (As of 1.19)?",
         "Nether",
         "The End",
         "Aether",
         "Overworld",
-        "C"]
+        'C']
         }
 var imgBank = [
 
@@ -198,38 +198,54 @@ function questionTextHandler(questionId){
         $("#questionIMG").src = imgBank[questionId];
 
 }
-const checkAnswer = () =>{
-        for(let i = 0; i < 10; i++){
-                let option;
+const checkAnswer = (num) =>{
+        // for(let i = 0; i < 10; i++){
 
                 if($('#option1').checked == true){
-                        option = "A"
+                        option = 'A';
+                        if(option == answerBank[randomList[num]][5]){
+                            score ++;
+                            console.log(score + " score in if");
+                    }
                         }
                 if($('#option2').checked == true){
-                        option = "B"
+                        option = 'B';
+                        if(option == answerBank[randomList[num]][5]){
+                            score ++;
+                            console.log(score + " score in if");
+                    }
                         }
                 if($('#option3').checked == true){
-                        option = "C"
+                        option = 'C';
+                        if(option == answerBank[randomList[num]][5]){
+                            score ++;
+                            console.log(score + " score in if");
+                    }
                         }
                 if($('#option4').checked == true){
-                        option = "D"
+                        option = 'D';
+                        if(option == answerBank[randomList[num]][5]){
+                            score ++;
+                            console.log(score + " score in if");
+                    }
                 }
-
-                if(option == answerBank[randomList[i]][5]){
-                        score ++;
-                }
+                // if(option == answerBank[randomList[num]][5]){
+                //         score ++;
+                //         console.log(score + " score in if");
+                // }
+                console.log(score + " score under if")
+                console.log(num + " Num param in checkAnswer");
         }
-}
+//}
 
 
 let randomList = randomQuesitonIdList();
 let score = 0;
+let option;
 
 document.addEventListener("DOMContentLoaded", () =>{
         
-        let i = 1;
-
-        questionTextHandler(randomList[0]);  
+        let i = 0;
 
         $("#submit").addEventListener ("click", ()=>{
                 if($('#option1').checked == false && 
@@ -240,11 +256,13 @@ document.addEventListener("DOMContentLoaded", () =>{
                 } 
                 else{
                         if(i < 10){
-                                console.log("test");
-                                questionTextHandler(randomList[i]);  
-                                checkAnswer();  
+                            questionTextHandler(randomList[i]);  
+                            checkAnswer(i);
+                            i++; 
+                            console.log(i+ " i") 
                         }
                         else{
+                            // try local storage for redirecting score
                                 // window.location.replace("results.html");
                                 // $("#score").textContent = "You scored " + counter + "/10";
                                 $("#question").textContent = "Your score is " + score + "/10";
@@ -252,8 +270,8 @@ document.addEventListener("DOMContentLoaded", () =>{
         
                         $('input[name="questionOption"]:checked').checked = false;
         
-                        i++;
-                        console.log(i)
+
+
                 }
 
          
