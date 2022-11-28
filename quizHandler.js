@@ -101,7 +101,7 @@ var answerBank = {
         'D'],
 
     
-    13 : ["What is the second ingredient in a Jukebox Block, aside from wooden planks?",
+    13 : ["What enchantment allows players to deal more damage to undead monsters?",
         "Sharpness",
         "Smite",
         "Piercing",
@@ -237,18 +237,18 @@ document.addEventListener("DOMContentLoaded", () =>{
                 alert("Please select an option");
                 } 
                 else{
-                    if(i < 10){
-                        questionTextHandler(randomList[i]);
-                        console.log(randomList[i]);  
-                        checkAnswer(randomList[i]);
-                        i++; 
-                    }
-                    else{
-                        // try local storage for redirecting score
-                            // window.location.replace("results.html");
-                            // $("#score").textContent = "You scored " + counter + "/10";
-                            $("#question").textContent = "Your score is " + score + "/10";
-                    }
+                        if(i < 10){
+                            questionTextHandler(randomList[i]);  
+                            checkAnswer(i);
+                            i++; 
+                            console.log(i+ " i") 
+                        }
+                        else{
+                            // try local storage for redirecting score
+                                // window.location.replace("results.html");
+                                // $("#score").textContent = "You scored " + counter + "/10";
+                                $("#question").textContent = "Your score is " + score + "/10";
+                        }
         
                     $('input[name="questionOption"]:checked').checked = false;
                 }
