@@ -244,11 +244,10 @@ document.addEventListener("DOMContentLoaded", () =>{
                             console.log(i+ " i") 
                         }
                         else{
-                                localStorage.setItem("score",score);
-                                // try local storage for redirecting score
-                                location.replace("results.html");
-                                $("#score").textContent = "You scored " + localStorage.getItem("score") + "/10";
-                                // $("#question").textContent = "Your score is " + score + "/10";
+                                
+                            $("h1").textContent = "Thank you for completing our quiz!";
+                            $("#question").textContent = "You scored "+ score + "/10!!";
+                            document.getElementById("answersForm").style.display = "none";
                         }
         
                     $('input[name="questionOption"]:checked').checked = false;
