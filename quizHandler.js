@@ -200,23 +200,26 @@ function questionTextHandler(questionId){
 }
 
 let score = 0;
+// Need to index on list, currently handing in counter number to answer bank to verify 
 let randomList = randomQuesitonIdList();
 let option;
 
 const checkAnswer = (num) =>{
+    let testNum = randomList[num];
+    console.log(testNum);
                 if($('#option1').checked == true){
                         option = 'A';
                         }
-                if($('#option2').checked == true){
+                else if($('#option2').checked == true){
                         option = 'B';
                         }
-                if($('#option3').checked == true){
+                else if($('#option3').checked == true){
                         option = 'C';
                         }
-                if($('#option4').checked == true){
+                else if($('#option4').checked == true){
                         option = 'D';
                 }
-                if(option === answerBank[num][5]){
+                if(option == answerBank[testNum][5]){
                         score ++;
                         console.log(score + " score in if");
                 }
@@ -226,8 +229,7 @@ const checkAnswer = (num) =>{
 document.addEventListener("DOMContentLoaded", () =>{
         
         let i = 1;
-
-        questionTextHandler(randomList[0])
+        questionTextHandler(randomList[0]); 
 
         $("#submit").addEventListener ("click", ()=>{
                 if($('#option1').checked == false && 
@@ -237,11 +239,15 @@ document.addEventListener("DOMContentLoaded", () =>{
                 alert("Please select an option");
                 } 
                 else{
-                        if(i < 10){
-                            questionTextHandler(randomList[i]);  
-                            checkAnswer(i);
-                            i++; 
-                            console.log(i+ " i") 
+                        if(i <= 10){
+                             
+                            checkAnswer(i-1);
+                            if(i < 10){
+                              questionTextHandler(randomList[i]); 
+                            }else{
+                                $("#question").textContent = "Your score is " + score + "/10";
+                            }
+
                         }
                         else{
                                 
@@ -251,6 +257,7 @@ document.addEventListener("DOMContentLoaded", () =>{
                         }
         
                     $('input[name="questionOption"]:checked').checked = false;
+                    i++;
                 }
         });
 })
