@@ -250,10 +250,11 @@ document.addEventListener("DOMContentLoaded", () =>{
 
                         }
                         else{
-                            // try local storage for redirecting score
-                                // window.location.replace("results.html");
-                                // $("#score").textContent = "You scored " + counter + "/10";
-                                $("#question").textContent = "Your score is " + score + "/10";
+                                localStorage.setItem("score",score);
+                                // try local storage for redirecting score
+                                location.replace("results.html");
+                                $("#score").textContent = "You scored " + localStorage.getItem("score") + "/10";
+                                // $("#question").textContent = "Your score is " + score + "/10";
                         }
         
                     $('input[name="questionOption"]:checked').checked = false;
