@@ -10,8 +10,9 @@ ul {
     list-style: none;
 }
 
-#questionDiv {
+#quizWindow {
     border: 2px solid black;
+    padding-bottom: 50px;
 }
 
 img{
