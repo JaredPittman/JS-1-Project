@@ -226,11 +226,17 @@ const checkAnswer = (num) =>{
         }
 
 document.addEventListener("DOMContentLoaded", () =>{
+
+        $("body"),addEventListener("hover", () => {
+            var audio = new Audio('main.ogg');
+            audio.play();
+        })
         
         let i = 1;
         questionTextHandler(randomList[0]); 
 
         $("#submit").addEventListener ("click", ()=>{
+
                 if($('#option1').checked == false && 
                 $('#option2').checked == false && 
                 $('#option3').checked == false && 
