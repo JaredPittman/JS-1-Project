@@ -245,15 +245,15 @@ document.addEventListener("DOMContentLoaded", () =>{
                             if(i < 10){
                               questionTextHandler(randomList[i]); 
                             }else{
-                                $("#question").textContent = "Your score is " + score + "/10";
+                                $("h1").textContent = "Thank you for completing our quiz!";
+                                $("#question").textContent = "You scored "+ score + "/10!!";
+                                document.getElementById("answersForm").style.display = "none";
                             }
 
                         }
                         else{
                                 
-                            $("h1").textContent = "Thank you for completing our quiz!";
-                            $("#question").textContent = "You scored "+ score + "/10!!";
-                            document.getElementById("answersForm").style.display = "none";
+
                         }
         
                     $('input[name="questionOption"]:checked').checked = false;
