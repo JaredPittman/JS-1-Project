@@ -2,9 +2,10 @@ html {
     background-color: rgb(135, 172, 241);
 }
 
-/* div {
-    background-color: rgb(135, 172, 241);
-} */
+#questionDiv {
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
 
 h1 {
     text-align: center;
@@ -22,13 +23,7 @@ div {
     border: 2px solid black;
     text-align:center;
     padding-bottom: 50px;
-    background-color: rgb(254, 255, 200);
 }
-#answersForm {
-    background-color: rgb(254, 255, 200);
-}
-
-
 
 p {
     background-color: rgb(254, 255, 200);
