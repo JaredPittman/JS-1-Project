@@ -2,6 +2,10 @@ html {
     background-color: rgb(135, 172, 241);
 }
 
+/* div {
+    background-color: rgb(135, 172, 241);
+} */
+
 h1 {
     text-align: center;
 }
@@ -10,20 +14,19 @@ ul {
     list-style: none;
 }
 
-ul li {
-    
+div {
+    background-color: rgb(135, 172, 241);
 }
 
 #quizWindow {
     border: 2px solid black;
     text-align:center;
     padding-bottom: 50px;
-    border-radius: 25px;
-    margin-left: 15px;
-    margin-right: 150px;
+    background-color: rgb(254, 255, 200);
 }
 
 p {
+    background-color: rgb(254, 255, 200);
     border: 2px solid black;
     text-align:center;
     border-radius: 25px;
@@ -34,6 +37,7 @@ p {
 }
 
 #questionIMG {
+    background-color: rgb(254, 255, 200);
     border: 2px solid black;
     border-radius: 25px;
     padding-left: 25px;
@@ -57,3 +61,4 @@ img{
 .hidden{
     display: none;
 }
+
