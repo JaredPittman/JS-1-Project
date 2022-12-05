@@ -174,28 +174,27 @@ var imgBank = [
         "images/Q10_Realms.png"
 ]
 function randomQuesitonIdList(){
-        let qList = [];
+    let qList = [];
 
-        for(let j = 0; j < 10;){
-                let num =  Math.floor(Math.random() * 19) + 1;
-                if(!qList.includes(num)){
-                        qList.push(num);
-                        j++;
-                }
+    for(let j = 0; j < 10;){
+        let num =  Math.floor(Math.random() * 19) + 1;
+        if(!qList.includes(num)){
+            qList.push(num);
+            j++;
         }
-        return qList;
+    }
+    return qList;
 }
 
 function questionTextHandler(questionId){
 
-        $("#question").textContent = answerBank[questionId][0];
+    $("#question").textContent = answerBank[questionId][0];
             
-        $("#option1").nextElementSibling.textContent = answerBank[questionId][1];
-        $("#option2").nextElementSibling.textContent = answerBank[questionId][2];
-        $("#option3").nextElementSibling.textContent = answerBank[questionId][3];
-        $("#option4").nextElementSibling.textContent = answerBank[questionId][4];
-    
-        $("#questionIMG").src = imgBank[questionId];
+    $("#option1").nextElementSibling.textContent = answerBank[questionId][1];
+    $("#option2").nextElementSibling.textContent = answerBank[questionId][2];
+    $("#option3").nextElementSibling.textContent = answerBank[questionId][3];
+    $("#option4").nextElementSibling.textContent = answerBank[questionId][4];
+    $("#questionIMG").src = imgBank[questionId];
 
 }
 
@@ -206,54 +205,60 @@ let option;
 const checkAnswer = (num) =>{
     let testNum = randomList[num];
     console.log(testNum);
-                if($('#option1').checked == true){
-                        option = 'A';
-                        }
-                else if($('#option2').checked == true){
-                        option = 'B';
-                        }
-                else if($('#option3').checked == true){
-                        option = 'C';
-                        }
-                else if($('#option4').checked == true){
-                        option = 'D';
-                }
-                if(option == answerBank[testNum][5]){
-                        score ++;
-                        console.log(score + " score in if");
-                }
-                return score;
-        }
+    if($('#option1').checked == true){
+    option = 'A';
+    }
+    else if($('#option2').checked == true){
+        option = 'B';
+    }
+    else if($('#option3').checked == true){
+        option = 'C';
+    }
+    else if($('#option4').checked == true){
+        option = 'D';
+    }
+    if(option == answerBank[testNum][5]){
+        score ++;
+        console.log(score + " score in if");
+    }
+    return score;
+}
+
+const music = () => {
+    document.getElementById("webpageAudio").play();
+}
+    
 
 document.addEventListener("DOMContentLoaded", () =>{
+
+    $("html").addEventListener("mouseover",music);
         
-        let i = 1;
-        questionTextHandler(randomList[0]); 
+    let i = 1;
+    questionTextHandler(randomList[0]); 
 
-        $("#submit").addEventListener ("click", ()=>{
-                if($('#option1').checked == false && 
-                $('#option2').checked == false && 
-                $('#option3').checked == false && 
-                $('#option4').checked == false){
-                alert("Please select an option");
-                } 
-                else{
-                        if(i <= 10){
-                             
-                            checkAnswer(i-1);
-                            if(i < 10){
-                              questionTextHandler(randomList[i]); 
-                            }else{
+    $("#submit").addEventListener ("click", ()=>{
 
-                                                                
-                                $("h1").textContent = "Thank you for completing our quiz!";
-                                $("#question").textContent = "You scored "+ score + "/10!!";
-                                document.getElementById("answersForm").style.display = "none";
-                            }
+    if($('#option1').checked == false && 
+    $('#option2').checked == false && 
+    $('#option3').checked == false && 
+    $('#option4').checked == false){
+    alert("Please select an option");
+    } 
+    else{
+            if(i <= 10){         
+                checkAnswer(i-1);
+                    if(i < 10){
+                        questionTextHandler(randomList[i]); 
+                    }else{
+                                   
+                        $("h1").textContent = "Thank you for completing our quiz!";
+                        $("#question").textContent = "You scored "+ score + "/10!!";
+                        document.getElementById("answersForm").style.display = "none";
                         }
+                    }
                     $('input[name="questionOption"]:checked').checked = false;
                     i++;
-                }
+            }
         });
 })
 
