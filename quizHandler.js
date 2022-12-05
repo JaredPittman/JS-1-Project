@@ -204,7 +204,6 @@ let option;
 
 const checkAnswer = (num) =>{
     let testNum = randomList[num];
-    console.log(testNum);
     if($('#option1').checked == true){
     option = 'A';
     }
@@ -219,7 +218,6 @@ const checkAnswer = (num) =>{
     }
     if(option == answerBank[testNum][5]){
         score ++;
-        console.log(score + " score in if");
     }
     return score;
 }
