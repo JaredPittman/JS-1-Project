@@ -245,7 +245,8 @@ document.addEventListener("DOMContentLoaded", () =>{
                     if(i < 10){
                         questionTextHandler(randomList[i]); 
                     }else{
-                        document.getElementById("webpageAudio").play();           
+                        document.getElementById("webpageAudio").play();   
+                        $("#questionIMG").src = "Trophy_Image.png";     
                         $("h1").textContent = "Thank you for completing our quiz!";
                         $("#question").textContent = "You scored "+ score + "/10!!";
                         document.getElementById("answersForm").style.display = "none";
