@@ -24,6 +24,11 @@ div {
     padding-bottom: 50px;
     background-color: rgb(254, 255, 200);
 }
+#answersForm {
+    background-color: rgb(254, 255, 200);
+}
+
+
 
 p {
     background-color: rgb(254, 255, 200);
