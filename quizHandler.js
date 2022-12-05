@@ -222,14 +222,10 @@ const checkAnswer = (num) =>{
     return score;
 }
 
-function music(){
-    document.getElementById("webpageAudio").play();
-}
     
 
 document.addEventListener("DOMContentLoaded", () =>{
 
-    $("html").addEventListener("mouseover",music);
         
     let i = 1;
     questionTextHandler(randomList[0]); 
@@ -243,12 +239,13 @@ document.addEventListener("DOMContentLoaded", () =>{
     alert("Please select an option");
     } 
     else{
+        document.getElementById("selectionAudio").play();
             if(i <= 10){         
                 checkAnswer(i-1);
                     if(i < 10){
                         questionTextHandler(randomList[i]); 
                     }else{
-                                   
+                        document.getElementById("webpageAudio").play();           
                         $("h1").textContent = "Thank you for completing our quiz!";
                         $("#question").textContent = "You scored "+ score + "/10!!";
                         document.getElementById("answersForm").style.display = "none";

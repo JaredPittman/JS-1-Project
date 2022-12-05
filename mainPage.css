@@ -55,11 +55,13 @@ p {
     text-align:center;
     background: rgb(94,65,22);
     background: linear-gradient(0deg, rgba(94,65,22,0.9444152661064426) 51%, rgba(68,89,26,0.9500175070028011) 67%, rgba(32,122,32,0.9360119047619048) 74%);
+    margin-top: 1em;
+    border: 3px solid black;
 }
 
 img{
-    width: 30%;
-    padding-top: 1em;
+    width: 60%;
+    padding-top: 0.5em;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
