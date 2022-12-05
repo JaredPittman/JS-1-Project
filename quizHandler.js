@@ -224,7 +224,7 @@ const checkAnswer = (num) =>{
     return score;
 }
 
-const music = () => {
+function music(){
     document.getElementById("webpageAudio").play();
 }
     
