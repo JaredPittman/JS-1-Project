@@ -236,17 +236,19 @@ document.addEventListener("DOMContentLoaded", () =>{
     $('#option2').checked == false && 
     $('#option3').checked == false && 
     $('#option4').checked == false){
-    $("#warning").textContent = "Please Select 1 of 4 options!"
+    $("#warning").textContent = "Please Select 1 of 4 options!";
     } 
     else{
-        $("#warning").textContent = " "
+        $("#warning").textContent = " ";
         document.getElementById("selectionAudio").play();
             if(i <= 10){         
                 checkAnswer(i-1);
                     if(i < 10){
                         questionTextHandler(randomList[i]); 
                     }else{
-                        document.getElementById("webpageAudio").play();   
+                        document.getElementById("webpageAudio").play();
+                        $("#imageDiv").classList.remove("col-sm-12col-md-12col-lg-3");
+                        $("#imageDiv").classList.add("col-sm-12col-md-12col-lg-12");
                         $("#questionIMG").src = "Trophy_Image.png";     
                         $("h1").textContent = "Thank you for completing our quiz!";
                         $("#question").textContent = "You scored "+ score + "/10!!";
