@@ -25,7 +25,7 @@ var answerBank = {
         "Stone Block",
         'B'],
 
-    3 : ["What is the name of the boss with the most HP?",
+    3 : ["What is the name of the Terraria boss with the most HP?",
         "Eater of Worlds",
         "Skeletron", 
         "Wall of Flesh",
@@ -149,7 +149,7 @@ var answerBank = {
         "Aether",
         "Overworld",
         'C']
-        }
+}
 var imgBank = [
 
         "images/armor1.png",
