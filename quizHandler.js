@@ -159,7 +159,7 @@ var imgBank = [
         "images/alchemyTable5.gif",
         "images/reaverShark6.png",
         "images/destroyer7.png",
-        "images/darkLance8",
+        "images/darkLance8.png",
         "images/tim9.png",
         "images/dripplerCrippler10.png",
         "images/Q1_Ores.png",
