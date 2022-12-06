@@ -205,7 +205,7 @@ let option;
 const checkAnswer = (num) =>{
     let testNum = randomList[num];
     if($('#option1').checked == true){
-    option = 'A';
+        option = 'A';
     }
     else if($('#option2').checked == true){
         option = 'B';
@@ -236,9 +236,10 @@ document.addEventListener("DOMContentLoaded", () =>{
     $('#option2').checked == false && 
     $('#option3').checked == false && 
     $('#option4').checked == false){
-    alert("Please select an option");
+    $("#warning").textContent = "Please Select 1 of 4 options!"
     } 
     else{
+        $("#warning").textContent = " "
         document.getElementById("selectionAudio").play();
             if(i <= 10){         
                 checkAnswer(i-1);
