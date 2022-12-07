@@ -4,21 +4,21 @@ const $ = selector => document.querySelector(selector);
 
 var answerBank = {
 
-    0 : ["What is the weakest armor in the game?",
+    0 : ["What is the weakest armor in Terraria?",
         "Wood Armor",
         "Shadow Armor",
         "Gold Armor",
         "Copper Armor",
         'D'],
 
-    1 : ["In what biome, do you have to be to fight the Eater of Worlds?",
+    1 : ["In what Terraria biome, do you have to be to fight the Eater of Worlds?",
         "Corruption",
         "Forest",
         "Hell",
         "Meteor",
         'A'],
 
-    2 : ["What is the second ingredient in a Hellstone bar, aside from Hellstone ore?",
+    2 : ["In Terraria, What is the second ingredient in a Hellstone bar, aside from Hellstone ore?",
         "Iron Ore",
         "Obsidian",
         "Vile Mushroom",
@@ -32,7 +32,7 @@ var answerBank = {
         "Ender Dragon",
         'C'],
 
-    4 : ["What potion makes you immune to lava?",
+    4 : ["What Terraria potion makes you immune to lava?",
         "Gills Potion",
         "Wrath Potion",
         "Iron Skin Potion",
@@ -46,7 +46,7 @@ var answerBank = {
         "Silver Pickaxe",
         'C'],
 
-    6 : ["What is the sequence of pre-hardmode bosses",
+    6 : ["What is the sequence of Terraria pre-hardmode bosses",
         "King Slime, Eye of Cthulhu, Eater of World",
         "Moon Lord, King Slime, Brain of Cthulhu",
         "Queen Bee, Empress of Light, Destroyer",
@@ -60,14 +60,14 @@ var answerBank = {
         "Chlorophyte Partisan",
         'C'],
 
-    8 : ["What monster drops Tattered Cloth?",
+    8 : ["What Terraria monster drops the Tattered Cloth item?",
         "Tim",
         "Goblin Scout",
         "Jungle Slime",
         "Undead Miner",
         'B'],
 
-    9 : ["How many flail-type weapons are there?",
+    9 : ["How many flail-type weapons are there in Terraria?",
         "4",
         "12",
         "7",
@@ -79,21 +79,21 @@ var answerBank = {
 
 
 
-    10 : ["What is the strongest material in the game used to craft Armor/Tools?",
+    10 : ["What is the strongest material in Minecraft used to craft Armor/Tools?",
         "Diamond",
         "Gold",
         "Iron",
         "Netherite",
         'D'],
 
-    11 : ["In what biome, can you find above ground abandoned mineshafts?",
+    11 : ["In what Minecraft biome, can you find above ground abandoned mineshafts?",
         "Badlands",
         "Giant Taiga",
         "Shattered Savannah",
         "Warm Ocean",
         'A'],
 
-    12 : ["What is the second ingredient in a Jukebox Block, aside from wooden planks?",
+    12 : ["In Minecraft, What is the second ingredient in a Jukebox Block, aside from wooden planks?",
         "Iron Ingot",
         "Redstone Dust",
         "Music Disc",
@@ -101,28 +101,28 @@ var answerBank = {
         'D'],
 
     
-    13 : ["What enchantment allows players to deal more damage to undead monsters?",
+    13 : ["What Minecraft enchantment allows players to deal more damage to undead monsters?",
         "Sharpness",
         "Smite",
         "Piercing",
         "Power",
         'B'],
 
-    14 : ["What potion makes you jump higher?",
+    14 : ["What potion makes you jump higher in Minecraft?",
         "Potion of Leaping",
         "Potion of Jumping",
         "Potion of Rabbits Leg",
         "Potion of Leg Strength",
         'A'],
 
-    15 : ["What type of pickaxe mines stone the fastest?",
+    15 : ["What type of pickaxe mines stone the fastest in Minecraft?",
         "Gold",
         "Netherite",
         "Diamond",
         "Stone",
         'A'],
 
-    16 : ["How far will water flow on an even plot of land?",
+    16 : ["How far will water flow on an even plot of land in Minecraft?",
         "5 Blocks",
         "Infinitely",
         "7 Blocks",
@@ -136,7 +136,7 @@ var answerBank = {
         "Minecraft New 3DS Edition",
         'B'],
 
-    18 : ["What mob drops leather when killed?",
+    18 : ["What Minecraft mob drops leather when killed?",
         "Sheep",
         "Pig",
         "Zombie",
