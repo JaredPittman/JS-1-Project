@@ -2,6 +2,7 @@
 
 const $ = selector => document.querySelector(selector);
 
+// Dictionary of all 20 qustions and their possible answers and actual answer
 var answerBank = {
 
     0 : ["What is the weakest armor in Terraria?",
@@ -150,6 +151,7 @@ var answerBank = {
         "Overworld",
         'C']
 }
+// List of all the images that go with their respective question
 var imgBank = [
 
         "images/armor1.png",
@@ -173,19 +175,26 @@ var imgBank = [
         "images/Q9_Leather.png",
         "images/Q10_Realms.png"
 ]
+// Function to create a list of 20 random numbers between 0-19
 function randomQuesitonIdList(){
     let qList = [];
-
+    
+    // Loop through 20 times
     for(let j = 0; j < 10;){
         let num =  Math.floor(Math.random() * 19) + 1;
+        // check for any duplicate questions
         if(!qList.includes(num)){
+            // If not a duplicate, add it to the list
             qList.push(num);
+            // increment the counter
             j++;
         }
     }
     return qList;
 }
 
+// Function to set the text/img of the question header,
+// options, and supporting image to the current questions repective data.
 function questionTextHandler(questionId){
 
     $("#question").textContent = answerBank[questionId][0];
@@ -195,70 +204,96 @@ function questionTextHandler(questionId){
     $("#option3").nextElementSibling.textContent = answerBank[questionId][3];
     $("#option4").nextElementSibling.textContent = answerBank[questionId][4];
     $("#questionIMG").src = imgBank[questionId];
-
 }
 
+// Initialize the score, create the lit of random questions,
+// and the users selection
 let score = 0;
 let randomList = randomQuesitonIdList();
 let option;
 
+// arrow function t check whether the user selected the correct option
 const checkAnswer = (num) =>{
     let testNum = randomList[num];
+    // if user selected A, set option to A
     if($('#option1').checked == true){
         option = 'A';
     }
+        // if user selected B, set option to B
     else if($('#option2').checked == true){
         option = 'B';
     }
+        // if user selected C, set option to C
     else if($('#option3').checked == true){
         option = 'C';
     }
+        // if user selected D, set option to D
     else if($('#option4').checked == true){
         option = 'D';
     }
+    // Ifthe user selected the correct option, Add 1 to their score
     if(option == answerBank[testNum][5]){
         score ++;
     }
     return score;
 }
 
-    
-
+// When the page loads...
 document.addEventListener("DOMContentLoaded", () =>{
-
-        
+    // Initialize counter i to 1
     let i = 1;
+    // Display the first question
     questionTextHandler(randomList[0]); 
 
+    // Click handler for the submit button
     $("#submit").addEventListener ("click", ()=>{
 
+    // Check to see if the submit button was clicked
+    // without an option being selected
     if($('#option1').checked == false && 
     $('#option2').checked == false && 
     $('#option3').checked == false && 
     $('#option4').checked == false){
+        // If so, display an appropriate error message
     $("#warning").textContent = "Please Select 1 of 4 options!";
     } 
     else{
+        // If a option is selected...
+        // Set the warning back to empty
         $("#warning").textContent = " ";
+        // Play the option selected audio
         document.getElementById("selectionAudio").play();
+            // if the counter is less than or equal to 10..
             if(i <= 10){         
+                // first,check to see if the users answer is correct
                 checkAnswer(i-1);
+                    // then, if the counter is still less than 10
                     if(i < 10){
+                        // Set the appropriate information
                         questionTextHandler(randomList[i]); 
                     }else{
+                        // If the last question has been completed..
+                        // Play the results audio
                         document.getElementById("webpageAudio").play();
+                        
                         $("#imageDiv").classList.remove("col-sm-12col-md-12col-lg-3");
                         $("#imageDiv").classList.add("col-sm-12col-md-12col-lg-12");
+                        // Display the trophy Image
                         $("#questionIMG").src = "Trophy_Image.png";     
+                        // set the header to a thank you message
                         $("h1").textContent = "Thank you for completing our quiz!";
+                        // Set the question to a message displaying the users score
                         $("#question").textContent = "You scored "+ score + "/10!!";
+                        // Hide the form so its not visible
                         document.getElementById("answersForm").style.display = "none";
                         }
                     }
-                    $('input[name="questionOption"]:checked').checked = false;
-                    i++;
+                    // reset the radio button so that it becomes unchecked at the next question
+                $('input[name="questionOption"]:checked').checked = false;
+                // Increment the counter
+                i++;
             }
-        });
+    });
 })
 
 
