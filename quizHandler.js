@@ -300,18 +300,34 @@ document.addEventListener("DOMContentLoaded", () =>{
                         // Display the trophy Image
                         $("#questionIMG").src = "Trophy_Image.png";     
                         // set the header to a thank you message
-                        $("h1").textContent = "Thank you for completing our quiz!";
+                        $("h1").textContent = "Thank you for completing our quiz! Click on the text to view our Socials!";
                         // Set the question to a message displaying the users score
                         $("#question").textContent = "You scored "+ score + "/10!!";
 
+                        // Display the Social links in the form
                         socials();
 
+                        // Set click handlers for each text/Link
                         $("#option1").nextElementSibling.addEventListener("click", joshLinkedinClick);
                         $("#option2").nextElementSibling.addEventListener("click", joshGithubClick);
                         $("#option3").nextElementSibling.addEventListener("click", jaredLinkedinClick)
                         $("#option4").nextElementSibling.addEventListener("click", jaredGithubClick);
                         
+                        // Set the Submit buttons display to non to hide it
+                        document.getElementById("submit").style.display = "none";
 
+                        // Hide the radio button and set the text to purple  for each option
+                        document.getElementById("option1").style.display = "none";
+                        document.getElementById("span1").style.color = "purple";
+
+                        document.getElementById("option2").style.display = "none";
+                        document.getElementById("span2").style.color = "purple";
+
+                        document.getElementById("option3").style.display = "none";
+                        document.getElementById("span3").style.color = "purple";
+
+                        document.getElementById("option4").style.display = "none";
+                        document.getElementById("span4").style.color = "purple";
                         }
                     }
                     // reset the radio button so that it becomes unchecked at the next question
