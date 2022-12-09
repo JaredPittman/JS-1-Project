@@ -283,16 +283,12 @@ document.addEventListener("DOMContentLoaded", () =>{
                         // Play the results audio
                         document.getElementById("webpageAudio").play();
                         
-                        $("#imageDiv").classList.remove("col-sm-12col-md-12col-lg-3");
-                        $("#imageDiv").classList.add("col-sm-12col-md-12col-lg-12");
                         // Display the trophy Image
                         $("#questionIMG").src = "Trophy_Image.png";     
                         // set the header to a thank you message
                         $("h1").textContent = "Thank you for completing our quiz!";
                         // Set the question to a message displaying the users score
                         $("#question").textContent = "You scored "+ score + "/10!!";
-                        // Hide the form so its not visible
-                        document.getElementById("answersForm").style.display = "none";
                         }
                     }
                     // reset the radio button so that it becomes unchecked at the next question
