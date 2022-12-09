@@ -238,6 +238,27 @@ const checkAnswer = (num) =>{
     return score;
 }
 
+function socials(){
+    $("#option1").nextElementSibling.textContent = "Josh's Linkedin";
+    $("#option2").nextElementSibling.textContent = "Josh's Github";
+    $("#option3").nextElementSibling.textContent = "Jared's Linkedin";
+    $("#option4").nextElementSibling.textContent = "Jared's Github";
+}
+
+function sociallinks(){
+    if ($("#option1".checked = true)){
+        location.replace("")
+    }
+    if ($("#option1".checked = true)){
+        location.replace("")
+    }
+    if ($("#option1".checked = true)){
+        location.replace("https://www.linkedin.com/in/jared-pittman-810a34203/")
+    }
+    if ($("#option1".checked = true)){
+        location.replace("https://github.com/JaredPittman")
+    }
+}
 
 
 // When the page loads...
@@ -284,6 +305,7 @@ document.addEventListener("DOMContentLoaded", () =>{
                         $("h1").textContent = "Thank you for completing our quiz!";
                         // Set the question to a message displaying the users score
                         $("#question").textContent = "You scored "+ score + "/10!!";
+                        socials();
                         }
                     }
                     // reset the radio button so that it becomes unchecked at the next question
