@@ -245,19 +245,17 @@ function socials(){
     $("#option4").nextElementSibling.textContent = "Jared's Github";
 }
 
-function sociallinks(){
-    if ($("#option1".checked = true)){
-        location.replace("")
-    }
-    if ($("#option1".checked = true)){
-        location.replace("")
-    }
-    if ($("#option1".checked = true)){
-        location.replace("https://www.linkedin.com/in/jared-pittman-810a34203/")
-    }
-    if ($("#option1".checked = true)){
-        location.replace("https://github.com/JaredPittman")
-    }
+function jaredGithubClick(){
+    window.open("https://github.com/JaredPittman");
+}
+function joshGithubClick(){
+    window.open("https://github.com/JoshFudge");
+}
+function jaredLinkedinClick(){
+    window.open("https://www.linkedin.com/in/jared-pittman-810a34203/");
+}
+function joshLinkedinClick(){
+    window.open("https://www.linkedin.com/in/joshua-fudge-1343b6223/");
 }
 
 
@@ -305,7 +303,15 @@ document.addEventListener("DOMContentLoaded", () =>{
                         $("h1").textContent = "Thank you for completing our quiz!";
                         // Set the question to a message displaying the users score
                         $("#question").textContent = "You scored "+ score + "/10!!";
+
                         socials();
+
+                        $("#option1").nextElementSibling.addEventListener("click", joshLinkedinClick);
+                        $("#option2").nextElementSibling.addEventListener("click", joshGithubClick);
+                        $("#option3").nextElementSibling.addEventListener("click", jaredLinkedinClick)
+                        $("#option4").nextElementSibling.addEventListener("click", jaredGithubClick);
+                        
+
                         }
                     }
                     // reset the radio button so that it becomes unchecked at the next question
