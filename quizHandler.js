@@ -238,12 +238,7 @@ const checkAnswer = (num) =>{
     return score;
 }
 
-function socials(){
-    $("#option1").nextElementSibling.textContent = "Josh's Linkedin";
-    $("#option2").nextElementSibling.textContent = "Josh's Github";
-    $("#option3").nextElementSibling.textContent = "Jared's Linkedin";
-    $("#option4").nextElementSibling.textContent = "Jared's Github";
-}
+
 
 // When the page loads...
 document.addEventListener("DOMContentLoaded", () =>{
